@@ -1,0 +1,85 @@
+
+div.ParentContainer{
+
+  display: grid;
+  
+  grid-template-columns: 80% 80% 80%;
+  grid-template-rows: 80% 80% 80% 80% ;
+  width: 500px;
+  height: 200px;
+  gap: 10px;
+  
+  }
+  .header{
+      align-content: center;
+  background-color: rgb(122, 118, 145);
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  }
+  
+  .footer{
+      align-content: center;
+      background-color: rgb(122, 118, 145);
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 4;
+  }
+  
+  .mainbar1{
+      grid-column-start:2 ;
+      grid-column-end:4 ;
+      align-content: center;
+      background-color: rgb(51, 71, 134);
+      text-align: center;
+  }
+  
+  .mainbar{
+      align-content: center;
+      background-color: rgb(51, 71, 134);
+      text-align: center;
+  }
+  
+  .sidebar{
+     
+  align-content: center;
+  background-color: rgb(86, 170, 138);
+  text-align: center;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  transition: all ease-in-out 0.8s;
+  }
+  
+  .hide{
+      transform: translate(-600px,0px);
+      transition: all ease-in-out 0.5s;
+  }
+  
+  @media screen and (max-width: 700px) {
+      .sidebar {
+        position: absolute;
+        height: 100%;
+        width: 150px;
+      }
+      .sidebar_toggle_icons {
+        display: block;
+      }
+      .mainbar1 {
+       display: none;
+      }
+      .mainbar{display: none;}
+  
+      .header{
+          align-content: center;
+      background-color: rgb(88, 134, 134);
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start:1 ;
+      grid-row-end: 5;
+      }
+  
+      .footer{
+          display: none;
+      }
+  
+    }
